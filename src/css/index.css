@@ -1,0 +1,97 @@
+@import url('http://fonts.cdnfonts.com/css/oilbats');
+@font-face {
+      font-family: 'JSArirang-Regular';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/JSArirang-RegularA1.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
+
+html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+}
+
+body {
+      background: url("../img/dust4.png"), #2f2f2f;
+      background-size: 450px 450px;
+      position: absolute;
+}
+
+img.stain1 { 
+      opacity: 0.45;
+      z-index: -1;
+      width: 200px;
+      position: fixed;
+      top: 200px;
+      left: 25px;
+}
+
+img.stain2 { 
+      opacity: 0.5;
+      z-index: -1;
+      width: 200px;
+      position: fixed;
+      bottom: 200px;
+      right: 25px;
+}
+
+img.stain3 { 
+      opacity: 0.5;
+      z-index: -1;
+      width: 300px;
+      position: fixed;
+      top: -120px;
+      right: -125px;
+}
+
+div#App {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+}
+
+img.quiz {
+      width: 80%;
+}
+
+input.answer {
+      border: none;
+      background: url('../img/paper.jpeg');
+      color: rgb(155, 52, 52);
+      padding: 5px;
+      border-radius: 10px;
+      margin-top: 20px;
+      width: 50%;
+      max-width: 400px;
+      font-size: 18px;
+      text-align: center;
+      font-family: 'OilBats', 'JSArirang-Regular';
+}
+
+input:focus, button:focus{
+      outline: none;
+}
+
+button.submit {
+      background-color: rgb(126, 13, 13);
+      color: rgb(195, 195, 195);
+      border: none;
+      padding: 5px 20px;
+      border-radius: 10px;
+      margin-top: 10px;
+      font-size: 18px;
+      text-align: center;
+      font-family: 'OilBats', 'JSArirang-Regular';
+}
+
+p.hint {
+      width: 80%;
+      color: rgb(195, 195, 195);
+      line-height: 30px;
+      font-size: 18px;
+      font-family: 'OilBats', 'JSArirang-Regular';
+}
