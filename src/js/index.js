@@ -1,4 +1,5 @@
 //const ans = [0, 4, 21, 9, '일과학고등학교', 5];
+//a
 
 const check_Ans = () => {
     var path = window.location.pathname;
