@@ -1,21 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <script src="/src/js/w.js"></script>
-      <link rel="stylesheet" href="/src/css/index.css">
-      <title>Q2</title>
-</head>
-<body>
-      <img src="/src/img/stain1.png" class="stain1">
-      <img src="/src/img/stain2.png" class="stain2">
-      <img src="/src/img/stain3.png" class="stain3">
-      <div id="App">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="/src/js/w.js"></script>
+        <link rel="stylesheet" href="/src/css/index.css" />
+        <title>Q2</title>
+    </head>
+    <body>
+        <img src="/src/img/stain1.png" class="stain1" />
+        <img src="/src/img/stain2.png" class="stain2" />
+        <img src="/src/img/stain3.png" class="stain3" />
+        <div id="App">
             <img src="/src/img/p2.png" class="quiz" />
-            <input type="text" class="answer" >
+            <input type="text" class="answer" />
             <button class="submit" onclick="check_Ans()">Are You Sure?</button>
-      </div>
-</body>
+        </div>
+        <script>
+            (function () {
+                var mouseTimer;
+                function mouseDown() {
+                    mouseUp();
+                    mouseTimer = window.setTimeout(execMouseDown, 2000); //set timeout to fire in 2 seconds when the user presses mouse button down
+                }
+
+                function mouseUp() {
+                    if (mouseTimer) window.clearTimeout(mouseTimer); //cancel timer when mouse button is released
+                    img.src = "/src/img/p2.png";
+                }
+
+                function execMouseDown() {
+                    img.src = "/src/img/p2_touched.png";
+                }
+
+                var img = document.getElementsByClassName("quiz")[0];
+                img.addEventListener("mousedown", mouseDown);
+                document.body.addEventListener("mouseup", mouseUp); //listen for mouse up event on body, not just the element you originally clicked on
+            })();
+        </script>
+    </body>
 </html>
